@@ -264,3 +264,5 @@ contantos.addEventListener('click',()=>{
         block: 'start'
     })
 })
+
+console.log('ajshdçlashdç')
