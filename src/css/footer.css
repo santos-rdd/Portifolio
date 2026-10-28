@@ -1,0 +1,186 @@
+.contact,
+.myContact,
+.textDiv,
+.myInfosImage,
+.moreP,
+.footerInfos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact{
+    width: 100%;
+    height: 600px;
+    flex-direction: column;
+}
+
+.contactMe,
+.myInfosImage{
+    width: 45%;
+    height: 100%;
+}
+
+.myContact{
+    width: 100%;
+    height: 400px;
+    place-items: center;
+
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 8px 22px rgba(32, 33, 36, 0.178);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    position: relative;
+    gap: 20px;
+    overflow: hidden;
+
+    font-family: "DM Mono", monospace;
+    font-size: clamp(11px, 1.15vw, 14px);
+    line-height: 1.9;
+
+    color: #d7d9e2;
+    border-color: #202228;
+    margin-left: 40px;
+
+    padding: 15px;
+    margin-bottom: 40px;
+    flex-direction: row;
+}
+
+.contactDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    width: 90%;
+    height: 30%;
+    flex-direction: column;
+}
+
+.contactDiv span{
+    color: rgb(240, 140, 140);
+    font-size: 0.8rem;
+    padding-right: 10px;
+
+}
+
+.contactDiv p{
+    color: rgba(0, 0, 0, 0.363);
+    font-size: 0.8rem;
+}
+
+.textDiv{
+    color: black;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 40%;
+    line-height: 1.2;
+}
+
+.textDiv span{
+    color: gray;
+}
+
+.textMe p{
+    color: rgba(0, 0, 0, 0.452);
+}
+
+.myInfosImage{
+    flex-direction: column;
+}
+
+.myInfosImage img{
+    width: 155px;
+    height: 155px;
+    border-radius: 100%;
+
+    margin-top: 60px;
+    margin-left: 230px;
+}
+
+.email{
+    width: 100%;
+    height: 30%;
+}
+
+.moreP{
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+
+    width: 260px;
+    height: 50px;
+    margin-left: auto;
+
+    padding: 0 20px 0 20px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.moreP:hover{
+    opacity: 0.8;
+}
+
+.moreP a{
+    margin-right: auto;
+    color: white;
+}
+
+.moreP span{
+    margin-left: auto;
+}
+
+.links{
+    width: 26%;
+    height: 3%;   
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: flex-start; 
+    gap: 20px;
+}
+
+.links a{
+    color: gray;
+    font-size: 0.7rem;
+    font-weight: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+}
+
+.links a:hover{
+    opacity: 0.6;
+}
+
+.myContact{
+    width: 100%;
+    height: 100%;
+}
+
+.footerInfos{
+    width: 100%;
+    height: 200px;
+}
+
+.footerInfos p{
+    margin-right: auto;
+    color: rgba(0, 0, 0, 0.342);
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+.footerInfos span{
+    color: rgba(0, 0, 0, 0.342);
+    font-size: 0.7rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.footerInfos span:hover{
+    color: black;
+}
+

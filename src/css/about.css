@@ -1,0 +1,274 @@
+.developerJs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 45%;
+    width: 500px;
+    place-items: center;
+    border-radius: 12px;
+    background: #202228;
+    box-shadow: 0 8px 22px rgba(32, 33, 36, 0.178);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    position: relative;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+    font-family: "DM Mono", monospace;
+    font-size: clamp(11px, 1.15vw, 14px);
+    line-height: 1.9;
+    color: #d7d9e2;
+    border-color: #202228;
+}
+
+.stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 10px;
+}
+
+.stack p {
+    margin-right: auto;
+}
+
+.stack span {
+    color: #686b7381;
+    font-size: 0.7rem;
+}
+
+.aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.stackTool {
+    width: 16%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stackTool p {
+    color: #00000098;
+    font-size: 0.7rem;
+}
+
+.stackTool span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.cardStack {
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardStack:hover {
+    opacity: 0.8;
+}
+
+.blueCard {
+    background-color: rgb(0, 47, 255);
+}
+
+.darkBlueCard {
+    background-color: rgb(0, 0, 150);
+}
+
+.greenCard {
+    background-color: #4f9c45;
+}
+
+.orangeCard {
+    background-color: #e67540;
+}
+
+.lightBlueCard {
+    background-color: #5967a8;
+}
+
+.redCard {
+    background-color: #ed5b45;
+}
+
+.textAboutMe {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    height: 50%;
+    margin-top: 60px;
+    gap: 30px;
+    width: 100%;
+}
+
+.textAboutMe p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: rgba(0, 0, 0, 0.425);
+}
+
+.sel {
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 255, 0.048);
+    border: 1px solid rgba(0, 0, 255, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(10deg);
+    flex-direction: column;
+}
+
+.sel p {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 255, 0.349);
+    font-weight: 300;
+    height: 18px;
+}
+
+.sel span {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 255, 0.575);
+    font-weight: 550;
+}
+
+.headerCode {
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.315);
+    font-size: 0.7rem;
+}
+
+.headerCode span {
+    width: 55%;
+}
+
+.circleCode {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    width: 45%;
+}
+
+.circle {
+    width: 7px;
+    height: 7px;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+
+.red {
+    background-color: rgb(253, 78, 78);
+}
+
+.yellow {
+    background-color: rgb(255, 238, 0);
+}
+
+.green {
+    background-color: rgb(0, 233, 0);
+}
+
+pre {
+    font-family: "DM Mono", monospace;
+    font-size: clamp(11px, 1.15vw, 14px);
+    line-height: 1.9;
+    width: 100%;
+    height: 100%;
+}
+
+code {
+    display: block;
+    width: 100%;
+    height: 90%;
+}
+
+.codeText {
+    width: 85%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: "DM Mono", monospace;
+    line-height: 1.9;
+    font-size: 0.8rem;
+}
+
+.codeConstant {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.constant {
+    color: #c999ff;
+}
+
+.nameConstant {
+    color: #71a8ff;
+}
+
+.constantInfos {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+.constantInfos span {
+    color: #a5d68e;
+}
+
+.constantInfos h4 {
+    color: #efb06c;
+}
+
+.constantInfos h3 {
+    font-size: 0.8rem;
+    color: #c999ff;
+}
+
+.textCode {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.textCode p {
+    margin-right: 7px;
+}
+
+.codeNote {
+    color: #686b73;
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}

@@ -1,0 +1,63 @@
+.moreAvailable {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+}
+
+.moreAvailable a {
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    justify-content: flex-end;
+    color: black;
+    cursor: pointer;
+}
+
+.moreAvailable a:hover{
+    opacity: 0.6;
+}
+
+.opportunity {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.322);
+}
+
+.styleCircle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -125px;
+    left: -125px;
+    width: 253px;
+    height: 253px;
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.021);
+}
+
+.secondCircle {
+    width: 193px;
+    height: 193px;
+    border-radius: 100%;
+    background-color: rgba(255, 0, 0, 0.030);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.threeCircle {
+    width: 133px;
+    height: 133px;
+    border-radius: 100%;
+    border: 1px solid rgba(255, 0, 0, 0.199);
+    z-index: 1;
+    background-color: white;
+}
