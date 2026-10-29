@@ -1,10 +1,9 @@
 
 const container = document.getElementsByClassName('moreinfos')[0];
 
-
 async function getProjects(){
     try{
-        const data = await fetch('http://localhost:3000/getInfos');
+        const data = await fetch('https://portifolio-xw4h.onrender.com/getInfos');
 
         if (!data.ok) {
             throw new Error(`Erro na requisição: ${data.status}`);
@@ -18,36 +17,6 @@ async function getProjects(){
 } 
 
 const projectsReceive = await getProjects();
-
-// const projectsReceive = [
-//    { 
-//         number: '01',
-//         type: 'Full Stack',
-//         name: 'Financeiro',
-//         more: 'Plataforma de organização financeira com autenticação, dashboards e categorização de transações.',
-//         stackTags: ['React', 'Node.js', 'PostgreSQL'],
-//         imagesProject: ['../assets/image/teste/image (1).jpg', '../assets/image/teste/image (2).jpg', '../assets/image/teste/image (3).jpg'],
-//         link: 'https://github.com/santos-rdd/task-app'
-//    },
-//    { 
-//         number: '02',
-//         type: 'Back End',
-//         name: 'Organizador de arquivos',
-//         more: 'Organizador de arquivos simples que procura em pastas e sub-pastas procurando tipos de arquivos',
-//         stackTags: ['Node.js'],
-//         imagesProject: ['../assets/image/teste/image (3).jpg', '../assets/image/teste/image (1).jpg'],
-//         link: 'https://github.com/santos-rdd/FileOrganizer'
-//    },
-//    { 
-//         number: '03',
-//         type: 'Full Stack',
-//         name: 'Frotix',
-//         more: 'App feito como projeto para a faculdade, com ideia de ser um controlador de frotas para caminhoneiros',
-//         stackTags: ['React Native teste teste teste ', 'Node.js', 'PostgreSQL'],
-//         imagesProject: ['../assets/image/teste/image (2).jpg', '../assets/image/teste/image (1).jpg', '../assets/image/teste/image (3).jpg'],
-//         link: 'https://github.com/santos-rdd/frotix'
-//    },
-// ];
 
 function createElementAndClass(tag, className, idReceive = '', secondClass = '', threeClass = ''){
     const element = document.createElement(tag);
@@ -98,11 +67,11 @@ function createContent(numberProject = '00', stackProject = 'Carregando Stack', 
 
     const prevBtn = createElementAndClass('button', 'next', '', 'button');
         const imgSetPrev = createElementAndClass('img');
-        imgSetPrev.src = '../assets/image/icons/right.png';
+        imgSetPrev.src = './assets/image/icons/right.png';
         
     const nextBtn = createElementAndClass('button', 'prev', '', 'button');
         const imgSetNext = createElementAndClass('img');
-        imgSetNext.src = '../assets/image/icons/right.png';
+        imgSetNext.src = './assets/image/icons/right.png';
 
     const infosProject = createElementAndClass('div', 'infosProject');
         const numberAndName = createElementAndClass('div', 'numberAndName');
@@ -139,7 +108,7 @@ function createContent(numberProject = '00', stackProject = 'Carregando Stack', 
         gitHubLink.target = '_blank';
         gitHubLink.rel = 'noopener noreferrer';
             const gitHubImage = createElementAndClass('img');
-            gitHubImage.src = '../assets/image/github.png';
+            gitHubImage.src = './assets/image/github.png';
 
     project.appendChild(containerImages);
     project.appendChild(prevBtn);
@@ -265,4 +234,3 @@ contantos.addEventListener('click',()=>{
     })
 })
 
-console.log('ajshdçlashdç')

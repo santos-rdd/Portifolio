@@ -25,10 +25,10 @@ export const routes = [
             console.log(formatted);
 
             if(error){
-                return res.end(JSON.stringify({ statusReq: 500, error: error }));
+                return res.end(JSON.stringify({ error: error }));
             }
 
-            return res.end(JSON.stringify({ statusReq: 200, data: formatted }));
+            return res.end(JSON.stringify({ data: formatted }));
         }
     },
 ];
