@@ -1,4 +1,3 @@
-import { format } from 'node:path';
 import { supabase } from '../database/db.js';
 
 export const routes = [
@@ -19,10 +18,9 @@ export const routes = [
                     stackTags: e.stacks,
                     imagesProject: e.images,
                     link: e.git_url,
+                    video: e.video,
                 }
             });
-
-            console.log(formatted);
 
             if(error){
                 return res.end(JSON.stringify({ error: error }));

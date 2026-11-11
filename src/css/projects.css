@@ -160,6 +160,13 @@
     height: 100%;
 }
 
+.slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
 .carousel img {
     display: block;
     margin: 0 auto;

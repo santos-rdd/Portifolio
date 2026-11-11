@@ -1,4 +1,3 @@
-
 const container = document.getElementsByClassName('moreinfos')[0];
 
 async function getProjects(){
@@ -40,8 +39,7 @@ function createElementAndClass(tag, className, idReceive = '', secondClass = '',
     return element; 
 }
 
-function createContent(numberProject = '00', stackProject = 'Carregando Stack', titleProject = 'Carregando',  moreProject = 'Projeto ainda em carregamento', arrayTags = [], arrayImage = [], linkReceive){
-    
+function createContent(numberProject = '00', stackProject = 'Carregando Stack', titleProject = 'Carregando',  moreProject = 'Projeto ainda em carregamento', arrayTags = [], arrayImage = [], linkReceive, videoReceive = ''){
     let current = 0;
     let maxStacks = 0;
     const project = createElementAndClass('div', 'myProject');
@@ -53,6 +51,21 @@ function createContent(numberProject = '00', stackProject = 'Carregando Stack', 
             const pBar = createElementAndClass('p');
             const pMax = createElementAndClass('p');
 
+        // Adaptado para aceitar tanto uma string única quanto um array de vídeos
+        if(videoReceive){
+            const videos = Array.isArray(videoReceive) ? videoReceive : [videoReceive];
+            for(let v = 0; v < videos.length; v++){
+                const slide = createElementAndClass('div', 'slide');
+                const vid = createElementAndClass('video');
+                vid.src = videos[v];
+                vid.controls = true;
+                vid.preload = 'metadata';
+                vid.playsInline = true;
+                slide.appendChild(vid);
+                carouselInner.appendChild(slide);
+            }
+        }
+
         for(let x = 0; x < arrayImage.length; x++){
             const slide = createElementAndClass('div', 'slide');      
             const img = createElementAndClass('img');
@@ -61,9 +74,11 @@ function createContent(numberProject = '00', stackProject = 'Carregando Stack', 
             carouselInner.appendChild(slide);
         }
 
+        const trackImages = Array.from(carouselInner.children);
+
         pCurrent.textContent = 1;
         pBar.textContent = '/';
-        pMax.textContent = arrayImage.length;
+        pMax.textContent = trackImages.length;
 
     const prevBtn = createElementAndClass('button', 'next', '', 'button');
         const imgSetPrev = createElementAndClass('img');
@@ -144,7 +159,6 @@ function createContent(numberProject = '00', stackProject = 'Carregando Stack', 
 
     gitHubLink.appendChild(gitHubImage);
         
-    const trackImages = Array.from(carouselInner.children);
     function update(){
         const slidesWidth = trackImages[0].getBoundingClientRect().width;
         carouselInner.style.transform = `translateX(-${current * slidesWidth}px)`;
@@ -183,7 +197,8 @@ for(const currentItem of projectsReceive.data){
         currentItem.more,
         currentItem.stackTags,
         currentItem.imagesProject,
-        currentItem.link
+        currentItem.link,
+        currentItem.video
     );
 
     container.appendChild(project);
@@ -233,4 +248,3 @@ contantos.addEventListener('click',()=>{
         block: 'start'
     })
 })
-
